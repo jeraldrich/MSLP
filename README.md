@@ -24,7 +24,7 @@ The main process parses the file and is the producer. Due to disk IO limitations
 
 For every core you have, a seperate process will be spawned and handle SQLAlchemy integrity checks, parsing, and insertion into MySQL using batch inserts.
 
-Parses and stores 10 million messages in a transactional database in around 2-3 minutes. Generates results in 1 minute. Processor usage around 25% per core. Total memory usage between 70-120MB 
+Parses and stores 10 million messages in a transactional database in around 2-3 minutes. Generates results in 1 minute. Processor usage around 7%-20% per core. Total memory usage between 70-100MB total.
 
 Generates a result file for you to check against.
 
