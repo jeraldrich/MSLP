@@ -1,4 +1,9 @@
-# MSLP - Multiprocessing SQLAlchemy Largefile Processor
+# MSLP - Multiprocessing SQLAlchemy Largefile Processing
+
+- Parses file of any size (1GB+) 
+- Inserts file contents into mysql using SQLAlchemy per processor
+- Processes 10million+ rows of json into MySQL in 2 minutes on 6cpus
+
 INSTALL NOTES:
 
 - have mysql installed
