@@ -2,7 +2,7 @@
 
 - Parses file of any size (1GB+) 
 - Inserts file contents into mysql using SQLAlchemy per processor
-- Processes 10million+ rows of json into MySQL in 2 minutes on 6cpus
+- Processes 10million+ rows of json into MySQL in 2 minutes and 70-100MB memory on 6cpus
 
 INSTALL NOTES:
 
