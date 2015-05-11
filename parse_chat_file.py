@@ -10,9 +10,8 @@ from sqlalchemy import asc
 from producers import LargeFileParser, ChatMessageParser
 from consumers import create_mysql_pool, batch_insert
 from consumers.models import ChatMessage
+from settings import CHAT_LOG
 
-
-CHAT_FILE = 'big_input'
 
 logger = logging.getLogger('chat_message_parser')
 logger.setLevel(logging.DEBUG)
@@ -23,7 +22,7 @@ logger.addHandler(stream_handler)
 
 
 def producer_queue(queue, parser):
-    for data in LargeFileParser(CHAT_FILE):
+    for data in LargeFileParser(CHAT_LOG):
         parsed_data = parser.parse(data)
         queue.put(parsed_data)
     queue.put('STOP')
