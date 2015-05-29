@@ -2,7 +2,7 @@
 
 http://blog.jeremyaldrich.net/en/latest/multiprocessing_sqlalchemy_largefile_processing.html
 - Parses file of any size (1GB+) 
-- Inserts file contents into mysql using SQLAlchemy per processor
+- Inserts file contents into mysql using SQLAlchemy per processor in batch inserts
 - Processes 10million+ rows of json by reading file, filtering through SQLAlchemy models,  and inserting into MySQL in 2 minutes and 70-100MB memory consistently
 - Processing speed increases per cpu avaliable: from multiprocessing import cpu_count; cpu_count()
 
