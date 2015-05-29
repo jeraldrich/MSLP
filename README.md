@@ -20,7 +20,7 @@ INSTALL NOTES:
 
 This takes advantage of multiple processors. Able to parse a file of any size by splitting it into seperate file chunks, and yielding each line to a consumer queue.
 
-The main process parses the file and is the producer. Due to disk IO limitations, only one producer parses the file. 
+The main process parses the file and is the producer. Due to disk IO limitations, only one producer parses the file, but can be easily increased if you run this on SSD for example.
 
 For every core you have, a seperate process will be spawned and handle SQLAlchemy integrity checks, parsing, and insertion into MySQL using batch inserts.
 
