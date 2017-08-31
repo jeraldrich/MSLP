@@ -1,23 +1,12 @@
 # MSLP - Multiprocessing SQLAlchemy Largefile Processing
 
+Example using Python 3 multiprocessing to parse large files.
 http://blog.jeremyaldrich.net/en/latest/multiprocessing_sqlalchemy_largefile_processing.html
+
 - Parses file of any size (1GB+) 
 - Inserts file contents into mysql using SQLAlchemy per processor in batch inserts
 - Processes 10million+ rows of json by reading file, filtering through SQLAlchemy models,  and inserting into MySQL in 2 minutes and 70-100MB memory consistently
 - Processing speed increases per cpu avaliable: from multiprocessing import cpu_count; cpu_count()
-
-INSTALL NOTES:
-
-- have mysql installed
-- sudo apt-get install libmysqlclient-dev
-- sudo apt-get install mysql
-- have mysql running
-- configure settings.py with MYSQL credentials
-- have virtualenv installed
-- python bootstrap.py
-- source venv/bin/activate 
-- python generate_chat_file.py (or set CHAT_LOG in settings)
-- python parse_chat_file.py
 
 This takes advantage of multiple processors. Able to parse a file of any size by splitting it into seperate file chunks, and yielding each line to a consumer queue.
 
