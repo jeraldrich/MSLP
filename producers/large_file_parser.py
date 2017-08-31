@@ -28,9 +28,6 @@ class LargeFileParser(object):
         logger.info('end')
 
     def _split_large_file(self):
-        """
-        from http://codereview.stackexchange.com/a/57400
-        """
         if not os.path.isfile(self.filename):
             raise Exception(
                 'file does not exist:{0}'.format(self.filename)
