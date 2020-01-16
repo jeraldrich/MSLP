@@ -1,7 +1,7 @@
 # MSLP - Multiprocessing SQLAlchemy Largefile Processing
 
 Example using Python 3 multiprocessing to parse large files using sqlalchemy across multiple processors:
-http://blog.jeremyaldrich.net/en/latest/multiprocessing_sqlalchemy_largefile_processing.html
+https://www.jeremyaldrich.net/en/latest/multiprocessing_sqlalchemy_largefile_processing.html
 
 - Parses file of any size (1GB+) 
 - Inserts file contents into mysql using SQLAlchemy per processor in batch inserts
